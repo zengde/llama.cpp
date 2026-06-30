@@ -9,8 +9,8 @@
 
 ggml_tensor * clip_graph_locateanything::resize_position_embeddings_3d(uint32_t interpolation_mode) {
     ggml_tensor * pos_embd = model.position_embeddings;
-    const int height       = img.ny / patch_size;
-    const int width        = img.nx / patch_size;
+    const int height       = img.ny() / patch_size;
+    const int width        = img.nx() / patch_size;
     const uint32_t mode    = interpolation_mode;
 
     GGML_ASSERT(pos_embd);
