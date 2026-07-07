@@ -345,7 +345,7 @@ jobs:
 
     needs:
       - get-version
-      - windows
+      #- windows
       - windows-cpu
       - windows-cuda
       #- windows-sycl
